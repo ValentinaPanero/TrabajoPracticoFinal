@@ -1,0 +1,20 @@
+.logo{
+    position: relative;
+    width: 450px;
+    
+}
+
+header{
+    background-color: #008080;
+}
+
+.btnMenu{
+    width: 30px; /* Ancho del botón */
+  aspect-ratio: 1/1; /* Relación de aspecto cuadrada */
+  display: none; /* Ocultar inicialmente en tamaños de pantalla grandes */
+  cursor: pointer;
+}
+
+body{
+    background-color: #f6f6f6;
+}
