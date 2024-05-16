@@ -1,20 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .logo{
-    position: relative;
-    width: 450px;
-    
+    max-width: 200px;
 }
 
 header{
-    background-color: #008080;
+    display: flex;
+    background-color: #f180b5;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
-.btnMenu{
-    width: 30px; /* Ancho del botón */
-  aspect-ratio: 1/1; /* Relación de aspecto cuadrada */
-  display: none; /* Ocultar inicialmente en tamaños de pantalla grandes */
-  cursor: pointer;
+.navList{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navList li a{
+    text-decoration: none;
+    color: #131316;
+}
+
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 15px;
+    margin: 5px;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
 }
 
 body{
-    background-color: #f6f6f6;
+    
+    background-color: #131316;
+}
+
+nav{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 550px){
+   /*  .btnMenu{
+        display: block;
+    }
+    .nav{
+        display: none;
+    } */
+    .menuMobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffa9ba;
+        padding: 2rem;
+    }
+    .navList{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .navList li a{
+        color: white;
+    }
 }
