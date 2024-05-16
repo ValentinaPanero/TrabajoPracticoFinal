@@ -1,30 +1,20 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-.logo{
-    max-width: 200px;
-}
-
-header{
+header {
     display: flex;
-    background-color: #f180b5;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    /* padding: 2rem; */
+    background-color: #f180b5;
 }
 
-.navList{
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.navList li a{
-    text-decoration: none;
-    color: #131316;
+.logo {
+    max-width: 150px;
 }
 
 a {
@@ -35,43 +25,77 @@ a {
     margin: 5px;
     font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;   
+    font-size: large;
 }
 
 body{
-    
     background-color: #131316;
 }
 
-nav{
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.abrir-menu,
+.cerrar-menu {
     display: none;
 }
 
-
-
-
-@media screen and (max-width: 550px){
-   /*  .btnMenu{
+@media screen and (max-width: 550px) {
+    .abrir-menu,
+    .cerrar-menu {
         display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
     }
-    .nav{
-        display: none;
-    } */
-    .menuMobile {
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ffa0d6;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: #ffa9ba;
+        background-color: #1c1c1c;
         padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
-    .navList{
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
         flex-direction: column;
         align-items: end;
     }
 
-    .navList li a{
-        color: white;
+    .nav-list li a {
+        color: #ffa0d6;
     }
 }
