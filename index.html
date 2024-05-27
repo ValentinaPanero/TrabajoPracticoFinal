@@ -5,14 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DigitalArt</title>
+    <link rel="icon" href="img/LogoD.jpg" type="image/jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
 </head>
 <body>
-    <script src="header.js"></script>
+    <header>
+        <img class="logo" src="Img/Logo.jpg" alt="Logo" onclick="window.open('index.html', '_self')" />
+    
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+    
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
+            
+            <ul class="nav-list">
+                <div class="SearchBarMovile">
+                    <input class="SearchBarMovile-text" type="text" id="parametro" onkeyup="Search()" placeholder="Buscar..">
+                    <button class="SearchBarMovile-button"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
+                </div>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="tienda.html" target="-blank">Tienda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="wacom">
+            <h2>Wacom</h2>
+            <p>líder mundial en el mercado de los monitores interactivos y las tabletas para usuarios creativos.</p>
+        </div>
+        <div class="xp-pen">
+            <h2>Xp-Pen</h2>
+            <p>una de las principales marcas, inlcuye productos, contenidos y 
+                servicios de dibujo digital como una marca digital de innovación 
+                en el arte digital a nivel mundial.</p>
+        </div>
+        <div class="huion">
+            <h2>Huion</h2>
+            <p>empresa innovadora, diseñadora y fabricante que se dedica a los dispositivos
+                 y soluciones de tinta digital, como pen tablets, pen displays y pen computers</p>
+        </div>
+
+    </section>
+    
+
+    
+    
     
     <script src="script.js"></script>
 </body>
