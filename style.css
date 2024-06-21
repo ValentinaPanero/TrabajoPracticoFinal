@@ -21,6 +21,7 @@ header {
     display: flex;
     padding: 0 50px;
     border: none;
+    width: 30%;
 
 }
 
@@ -69,88 +70,6 @@ section{
     margin: 15px 60px;
 }
 
-.wacom{
-    padding: 15px 20px;
-    width: 400px;
-    height: 300px;
-    margin: 60px 20px;
-    background-color: #fff5ee;
-    background-image: url("img/Productos/Wacom/Wacom-Logo.png");
-    border-radius: 25px;
-    background-size: cover;
-    background-position: center;
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;   
-    font-size: large;
-}
-
-
-.wacom p{
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;   
-    font-size: large;
-}
-
-.xp-pen{
-    
-    top: 65px;
-    left: 440px;
-    padding: 15px 20px;
-    width: 400px;
-    height: 300px;
-    margin: 60px 20px;
-    background-color: #fff5ee;
-    background-image: url("img/Productos/XP-Pen/xppen-logo.png");
-    border-radius: 25px;
-    background-size: cover;
-    background-position: center;
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;   
-    font-size: large;
-}
-
-.xp-pen p{
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;   
-    font-size: large;
-}
-
-.huion{
-    
-    top: 65px;
-    left: 440px;
-    padding: 15px 20px;
-    width: 400px;
-    height: 300px;
-    margin: 60px 20px;
-    background-color: #fff5ee;
-    background-image: url("img/Productos/Huion/Huion-logo.png");
-    border-radius: 25px;
-    background-size: cover;
-    background-position: center;
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;   
-    font-size: large;
-}
-
-.huion p{
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;   
-    font-size: large;
-}
-
 
 
 .nav-list {
@@ -168,11 +87,36 @@ section{
 .cerrar-menu {
     display: none;
 }
-.SearchBarMovile{
+.nav-list .SearchBar-text .SearchBar-button{
     display: none;
 }
 
+.nav-list-marca {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list-marca li a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.nav-list .marcas, .Search{
+    display: none;
+}
+
+
+@media  screen and (max-width: 723px) {
+    .SearchBar{
+        display: none;
+    }
+    
+}
+
 @media screen and (max-width: 550px) {
+
+    
     .abrir-menu,
     .cerrar-menu {
         display: block;
@@ -220,13 +164,36 @@ section{
     .nav-list li a {
         color: #ffa0d6;
     }
+    
+    .nav-list .Search{
+        display: flex;
+        padding: 0;
+        border: none;
+        
+
+    }
+    .Search-button{
+        background-color: #ffa0d6;
+        border: none;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        width: 40px;
+        height: 30px;
+    }
+    
+    .Search input{
+        
+        width: 85%;
+        background-color: #fafbfd;
+        border: none;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        height: 30px;
+    }
+
+    .Search img{
+        width: 20px;
+    }
+
 }
 
-@media screen and (max-width: 389px) {
-    .SearchBar{
-        display: none;
-    }
-    .SearchBarMovile{
-        display: grid;
-    }
-}

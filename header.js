@@ -14,8 +14,16 @@ document.write(`
         <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-circle"></i></button>
         
         <ul class="nav-list">
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="tienda.html" target="-blank">Tienda</a></li>
-        </ul>
+            <li class="Search">
+                <input class="Search-text" type="text" id="parametro" onkeyup="Search()" placeholder="Buscar..">
+                <button class="Search-button"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
+            </li>
+            <li><a class="marca" href="#Wacom">Wacom</a></li>
+            <li><a class="marca" href="#XP-Pen">XP-Pen</a></li>
+            <li><a class="marca" href="#Huion">Huion</a></li>
+        </ul>   
     </nav>
+  
+    
+   
 </header>`)
