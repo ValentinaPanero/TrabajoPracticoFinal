@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DigitalArt</title>
+        <link rel="icon" href="img/LogoD.jpg" type="image/jpg">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="Img/Logo.jpg" alt="Logo" onclick="window.open('index.html', '_self')" />
+            <div class="SearchBar-admin">
+                <input class="SearchBar-text" type="text" id="parametro" onkeyup="Search()" placeholder="Buscar..">
+                <button class="SearchBar-button"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
+            </div>       
+        </header>
+
+        <button class="button" onclick="mostrarSeccion('lista')">Lista Producto</button>
+        <button class="button" onclick="mostrarSeccion('nuevo-producto')">Nuevo Producto</button>
+        <!--<button type="button" onclick= class="btnactualizar">Editar Producto</button>-->
+        <div id="lista">
+            <Fieldset>
+                <legend>Lista de Productos</legend>
+                <button class="button" onclick="obtenerProductos()">Obtener Productos</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IDCOD</th>
+                            <th>Título</th>
+                            <th>Precio AR$</th>
+                            <th>Precio U$S</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultados"></tbody>
+                </table>
+            </Fieldset>
+        </div>
+    
+        <div id="nuevo-producto" style="display: none;">
+            <fieldset>
+                <legend>Nuevo Producto</legend>
+                <form action="javascript:none">
+                    <input type="text" id="titulo" placeholder="Nombre de producto">
+                    <input type="number" id="PrecioPeso" placeholder="Precio en AR$">
+                    <input type="number" id="PrecioDolar" placeholder="Precio en U$S">
+                    <input type="date" id="fecha">
+                    <button class="button" onclick="crearProducto()">Crear Producto</button>
+                </form>
+            </fieldset>
+        </div>
+    
+        <div id="editar-producto" style="display: none;">
+            <fieldset>
+                <legend>Editar Producto</legend>
+                <form action="javascript:none;">
+                    <input type="text" id="edit-titulo" placeholder="Nombre de producto">
+                    <input type="number" id="edit-precioPESO" placeholder="Precio en AR$">
+                    <input type="number" id="edit-precioDOLAR" placeholder="Precio en U$S">
+                    <input type="date" id="edit-fecha">
+                    <button class="button" onclick="actualizarProducto()">Actualizar</button>
+                </form>
+            </fieldset>
+        </div>
+    
+            <script src="script.js"></script>
+    
+    </body>
+</html>

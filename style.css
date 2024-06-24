@@ -25,6 +25,8 @@ header {
 
 }
 
+
+
 .SearchBar-button{
     background-color: #ffa0d6;
     border: none;
@@ -32,6 +34,41 @@ header {
     border-bottom-right-radius: 100px;
     width: 40px;
     height: 30px;
+}
+
+fieldset input{
+    border-radius: 0;
+    display: block;
+    width: 95%;
+    border-left: #f180b5;
+    margin: 10px;
+}
+
+/*Quitar flechas de input numerico*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+
+}
+
+.button{
+    background-color: #f180b5;
+    border-radius: 50px;
+    border: none;
+    width: 25%;
+    height: 35px;
+    margin: 10px;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: large;
+}
+
+
+.button:active{
+    background-color: #da5191;
 }
 
 input {
@@ -46,6 +83,30 @@ input {
 .SearchBar img{
     width: 20px;
 }
+
+.SearchBar-admin{
+    display: flex;
+    border: none;
+    width: 50%;
+    margin: auto;
+   
+    
+}
+
+
+.SearchBar-admin button{
+    background-color: #ffa0d6;
+    border: none;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 50px;
+    height: 30px;
+}
+
+.SearchBar-admin img{
+    width: 20px;
+}
+
 a {
     color: white;
     text-align: center;
@@ -61,15 +122,61 @@ a {
 
 body{
     background-color: #131316;
-
 }
 
-section{
-    display: flex;
-    padding: 15px 50px;
-    margin: 15px 60px;
+table{
+    color: #fafbfd;
+    width: 100%;
 }
 
+.btnTabla{
+    background-color: #f180b5;
+    border-radius: 15px;
+    width: 60px;
+    border: none;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;   
+    font-size: large;
+}
+
+.btnTabla:active{
+    background-color: #da5191;
+}
+
+th{
+    background-color: #ffa0d6;
+    padding: 5px;
+}
+
+
+tr:nth-child(2n){
+    background-color: #696969;
+}
+
+.Productos{
+    padding-top: 25px;
+}
+.Productos div{
+    padding: 10px;
+}
+
+.Productos h3{
+    color: #fafbfd;
+}
+
+fieldset{
+    width: 95%;
+    margin: auto;
+}
+
+legend{
+    color: #fafbfd;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
 
 
 .nav-list {
@@ -107,14 +214,14 @@ section{
 }
 
 
-@media  screen and (max-width: 723px) {
+@media  screen and (max-width: 845px) {
     .SearchBar{
         display: none;
     }
     
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 845px) {
 
     
     .abrir-menu,
@@ -163,6 +270,7 @@ section{
 
     .nav-list li a {
         color: #ffa0d6;
+        
     }
     
     .nav-list .Search{
@@ -193,6 +301,20 @@ section{
 
     .Search img{
         width: 20px;
+    }
+
+    .button{
+        background-color: #f180b5;
+        border-radius: 50px;
+        border: none;
+        width: 23%;
+        height: 35px;
+        margin: 10px;
+        font-family: "Dosis", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;   
+        font-size: medium;
     }
 
 }
