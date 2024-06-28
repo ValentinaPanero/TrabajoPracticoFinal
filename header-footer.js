@@ -5,7 +5,7 @@ document.write(`
 
     <div class="SearchBar">
         <input class="SearchBar-text" type="text" id="parametro" onkeyup="Search()" placeholder="Buscar..">
-        <button class="SearchBar-button"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
+        <button class="SearchBar-button" onclick="Search()"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
     </div>
 
     <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
@@ -16,7 +16,7 @@ document.write(`
         <ul class="nav-list">
             <li class="Search">
                 <input class="Search-text" type="text" id="parametro" onkeyup="Search()" placeholder="Buscar..">
-                <button class="Search-button"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
+                <button class="Search-button" onclick="Search()"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
             </li>
 
 

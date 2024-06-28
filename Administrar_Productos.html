@@ -5,16 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DigitalArt</title>
         <link rel="icon" href="img/LogoD.jpg" type="image/jpg">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <img class="logo" src="Img/Logo.jpg" alt="Logo" onclick="window.open('index.html', '_self')" />
-            <div class="SearchBar-admin">
-                <input class="SearchBar-text" type="text" id="parametro" onkeyup="Search()" placeholder="Buscar..">
-                <button class="SearchBar-button"><img src="img/Botones/search_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="Buscar"></button>
-            </div>       
-        </header>
+        <script src="header-footer.js"></script>
 
         <button class="button" onclick="mostrarSeccion('lista')">Lista Producto</button>
         <button class="button" onclick="mostrarSeccion('nuevo-producto')">Nuevo Producto</button>
@@ -55,11 +53,12 @@
             <fieldset>
                 <legend>Editar Producto</legend>
                 <form action="javascript:none;">
-                    <input type="text" id="edit-titulo" placeholder="Nombre de producto">
-                    <input type="number" id="edit-precioPESO" placeholder="Precio en AR$">
-                    <input type="number" id="edit-precioDOLAR" placeholder="Precio en U$S">
+                    <input type="text" id="edit-idcod" readonly>
+                    <input type="text" id="edit-titulo" placeholder="Nombre de producto"    >
+                    <input type="number" id="edit-precioPeso" placeholder="Precio en AR$">
+                    <input type="number" id="edit-precioDolar" placeholder="Precio en U$S">
                     <input type="date" id="edit-fecha">
-                    <button class="button" onclick="actualizarProducto()">Actualizar</button>
+                    <button class="button" onclick="Modificar()">Actualizar</button>
                 </form>
             </fieldset>
         </div>

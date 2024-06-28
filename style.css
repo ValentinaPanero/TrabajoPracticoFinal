@@ -2,15 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 2rem; */
     background-color: #f180b5;
+    width: 100%;
+}
+a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 15px;
+    margin: 5px;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;   
+    font-size: large;
+}
+
+body{
+    background-color: #131316;
+    
+}
+
+footer{
+    background-color: #d0d0d0;
+    width: 100%;
+    margin-top: 125px;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: x-large;
+    color: #c12e72;
+}
+
+.copyright{
+    background-color: #f180b5;
+}
+
+footer img{
+    width: 25px;
 }
 
 .logo {
@@ -25,8 +61,6 @@ header {
 
 }
 
-
-
 .SearchBar-button{
     background-color: #ffa0d6;
     border: none;
@@ -34,6 +68,80 @@ header {
     border-bottom-right-radius: 100px;
     width: 40px;
     height: 30px;
+}
+
+.SearchBar-button:active{
+    background-color: #da5191;
+}
+
+.Productos-inicio{
+    margin-bottom: 150px;
+}
+
+.product{
+    background-color: #f6f6f6;
+    border: none;
+    border-radius: 20px;
+    width: 25%;
+    height: 150px;
+    margin: 15px;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: x-large;
+    display: inline-flex;
+}
+
+
+.product .titulo{
+    color: #da5191;
+    font-weight: bold;
+    width: auto;
+    margin: 10px;
+    margin-left: 5%;
+
+}
+
+.product .precioPeso, .precioDolar{
+    margin-top: 50px;
+    margin-left: 5%;
+    padding: 2%;
+    font-size: medium;
+    position: relative;
+    bottom: -20%;
+    left: -35%;
+    
+}
+
+.product .precioPeso{
+    color: #c12e72;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.btnCarrito{
+    margin-top: 80%;
+    background-color: #f180b5;
+    border-radius: 100%;
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    position: relative;
+    bottom: -25%;
+    right: 9%;
+
+}
+
+.btnCarrito:active{
+    background-color: #da5191;
+}
+
+.btnCarrito img{
+    width: 15px;
+    margin: auto;
 }
 
 fieldset input{
@@ -56,7 +164,7 @@ input::-webkit-inner-spin-button {
     background-color: #f180b5;
     border-radius: 50px;
     border: none;
-    width: 25%;
+    width: 15%;
     height: 35px;
     margin: 10px;
     font-family: "Dosis", sans-serif;
@@ -64,6 +172,7 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
     font-style: normal;   
     font-size: large;
+
 }
 
 
@@ -84,49 +193,16 @@ input {
     width: 20px;
 }
 
-.SearchBar-admin{
-    display: flex;
-    border: none;
-    width: 50%;
-    margin: auto;
-   
-    
-}
 
-
-.SearchBar-admin button{
-    background-color: #ffa0d6;
-    border: none;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    width: 50px;
-    height: 30px;
-}
-
-.SearchBar-admin img{
-    width: 20px;
-}
-
-a {
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    padding: 7px 15px;
-    margin: 5px;
-    font-family: "Dosis", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;   
-    font-size: large;
-}
-
-body{
-    background-color: #131316;
-}
 
 table{
     color: #fafbfd;
     width: 100%;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: large;
 }
 
 .btnTabla{
@@ -136,7 +212,7 @@ table{
     border: none;
     font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;   
     font-size: large;
 }
@@ -155,20 +231,14 @@ tr:nth-child(2n){
     background-color: #696969;
 }
 
-.Productos{
-    padding-top: 25px;
-}
-.Productos div{
-    padding: 10px;
-}
-
-.Productos h3{
-    color: #fafbfd;
+td:nth-child(n + 3){
+    text-align: right;
 }
 
 fieldset{
     width: 95%;
     margin: auto;
+    border-color: grey;
 }
 
 legend{
@@ -177,6 +247,7 @@ legend{
     letter-spacing: 2px;
     font-weight: bolder;
 }
+
 
 
 .nav-list {
@@ -214,15 +285,13 @@ legend{
 }
 
 
-@media  screen and (max-width: 845px) {
-    .SearchBar{
-        display: none;
-    }
-    
-}
 
 @media screen and (max-width: 845px) {
 
+
+    .SearchBar{
+        display: none;
+    }
     
     .abrir-menu,
     .cerrar-menu {
@@ -243,7 +312,7 @@ legend{
     }
 
     .nav {
-        opacity: 0;
+        opacity: 1;
         visibility: hidden;
         display: flex;
         flex-direction: column;
@@ -288,6 +357,10 @@ legend{
         width: 40px;
         height: 30px;
     }
+
+    .Search-button:active{
+        background-color: #da5191;
+    }
     
     .Search input{
         
@@ -307,15 +380,31 @@ legend{
         background-color: #f180b5;
         border-radius: 50px;
         border: none;
-        width: 23%;
-        height: 35px;
+        width: 26%;
+        height: 45px;
         margin: 10px;
         font-family: "Dosis", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 100;
+        font-weight: 400;
         font-style: normal;   
-        font-size: medium;
+        font-size: large;
     }
 
-}
+    .product{
+        width: 50%;
+        flex-wrap: wrap;
+    }
 
+    .btnCarrito{
+        position: static;
+        border-radius: 50px;
+        height: 30px;
+        width: 30%;
+    }
+
+    .product .precioPeso, .precioDolar{
+        position: static;
+        margin: 0;
+        margin-left: 5px;
+    }
+}
