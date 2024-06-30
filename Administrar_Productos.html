@@ -1,69 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DigitalArt</title>
-        <link rel="icon" href="img/LogoD.jpg" type="image/jpg">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script src="header-footer.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalArt</title>
+    <link rel="icon" href="img/LogoD.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="Img/Logo.jpg" alt="Logo" onclick="window.open('index.html', '_self')" />
+        <nav class="navAdmin" id="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>   
+        </nav>   
+    </header>
 
-        <button class="button" onclick="mostrarSeccion('lista')">Lista Producto</button>
-        <button class="button" onclick="mostrarSeccion('nuevo-producto')">Nuevo Producto</button>
-        <!--<button type="button" onclick= class="btnactualizar">Editar Producto</button>-->
-        <div id="lista">
-            <Fieldset>
-                <legend>Lista de Productos</legend>
-                <button class="button" onclick="obtenerProductos()">Obtener Productos</button>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>IDCOD</th>
-                            <th>Título</th>
-                            <th>Precio AR$</th>
-                            <th>Precio U$S</th>
-                            <th>Fecha</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultados"></tbody>
-                </table>
-            </Fieldset>
+    <button class="button" class="btnLista" onclick="mostrarSeccion('lista')">Lista Producto</button>
+    <button class="button" onclick="mostrarSeccion('nuevo-producto')">Nuevo Producto</button>
+    <!--<button type="button" onclick= class="btnactualizar">Editar Producto</button>-->
+    <div id="lista">
+        <Fieldset>
+            <legend>Lista de Productos</legend>
+            <button class="button" onclick="obtenerProductos()">Obtener Productos</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>IDCOD</th>
+                        <th>Título</th>
+                        <th>Precio AR$</th>
+                        <th>Precio U$S</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="resultados"></tbody>
+            </table>
+        </Fieldset>
+    </div>
+
+    <div id="nuevo-producto" style="display: none;">
+        <fieldset>
+            <legend>Nuevo Producto</legend>
+            <form action="javascript:none">
+                <input type="text" id="titulo" placeholder="Nombre de producto">
+                <input type="number" id="PrecioPeso" placeholder="Precio en AR$">
+                <input type="number" id="PrecioDolar" placeholder="Precio en U$S">
+                <input type="date" id="fecha">
+                <button class="button" onclick="crearProducto()">Crear Producto</button>
+            </form>
+        </fieldset>
+    </div>
+
+    <div id="editar-producto" style="display: none;">
+        <fieldset>
+            <legend>Editar Producto</legend>
+            <form action="javascript:none;">
+                <input type="text" id="edit-idcod" readonly>
+                <input type="text" id="edit-titulo" placeholder="Nombre de producto"    >
+                <input type="number" id="edit-precioPeso" placeholder="Precio en AR$">
+                <input type="number" id="edit-precioDolar" placeholder="Precio en U$S">
+                <input type="date" id="edit-fecha">
+                <button class="button" onclick="Modificar()">Actualizar</button>
+            </form>
+        </fieldset>
+    </div>
+
+    <footer>
+        <div class="contacto">
+            <h1>contactános</h1>
+            <ul>
+                <li><img src="img/Botones/whatsapp.png">+54 9 3564 37-2020</li>
+                <li><img src="img/Botones/Call.png">03564-443937</li>
+                <li><img src="img/Botones/mail.png">DigitalArt@gmail.com</li>
+                <li><img src="img/Botones/ubicacion.png">Mitre 439, San Francisco, Córdoba, Argentina</li>
+            </ul>
         </div>
-    
-        <div id="nuevo-producto" style="display: none;">
-            <fieldset>
-                <legend>Nuevo Producto</legend>
-                <form action="javascript:none">
-                    <input type="text" id="titulo" placeholder="Nombre de producto">
-                    <input type="number" id="PrecioPeso" placeholder="Precio en AR$">
-                    <input type="number" id="PrecioDolar" placeholder="Precio en U$S">
-                    <input type="date" id="fecha">
-                    <button class="button" onclick="crearProducto()">Crear Producto</button>
-                </form>
-            </fieldset>
+
+        <div class="copyright">
+            <p>© Digital Art - 2024. Todos los derechos reservados</p>
         </div>
+    </footer>
     
-        <div id="editar-producto" style="display: none;">
-            <fieldset>
-                <legend>Editar Producto</legend>
-                <form action="javascript:none;">
-                    <input type="text" id="edit-idcod" readonly>
-                    <input type="text" id="edit-titulo" placeholder="Nombre de producto"    >
-                    <input type="number" id="edit-precioPeso" placeholder="Precio en AR$">
-                    <input type="number" id="edit-precioDolar" placeholder="Precio en U$S">
-                    <input type="date" id="edit-fecha">
-                    <button class="button" onclick="Modificar()">Actualizar</button>
-                </form>
-            </fieldset>
-        </div>
-    
-            <script src="script.js"></script>
+    <script src="script.js"></script>
     
     </body>
 </html>

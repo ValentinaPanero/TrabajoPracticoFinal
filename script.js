@@ -19,8 +19,8 @@ function mostrarProductos(productos) {
         <tr>
           <td>${productos[i].idcod}</td>
           <td>${productos[i].titulo}</td>
-          <td class="precio">$${productos[i].precioPeso}</td>
-          <td class="precio">$${productos[i].precioDolar}</td>
+          <td class="precio">$ ${productos[i].precioPeso}</td>
+          <td class="precio">$ ${productos[i].precioDolar}</td>
           <td>${productos[i].fecha}</td>
           <td>
            <button class="btnTabla" onclick="MostrarFormularioModificar('${productos[i].idcod}')">Editar</button>
@@ -157,10 +157,9 @@ function mostrarProductosInicio(productos) {
         console.log(productos[i].titulo)
         html += `
         <div class="product">
-            <p class="titulo">${productos[i].titulo}</p>
-            <p class="precioPeso">AR$ ${productos[i].precioPeso}</p>
-            <p class="precioDolar">U$S ${productos[i].precioDolar}</p>
-            <button class="btnCarrito"><img src="img/Botones/shopping_cart_24dp_FILL0_wght400_GRAD0_opsz24.png" alt="añadir al carrito"></button>
+            <label class="titulo">${productos[i].titulo}</label>
+            <label class="precioPeso">AR$ ${productos[i].precioPeso}</label>
+            <label class="precioDolar">U$S ${productos[i].precioDolar}</label>
         </div>  
         `;
     }
@@ -177,7 +176,7 @@ function Search() {
 	let input = document.getElementById("parametro");
 	input.value = input.value.toLowerCase();
 
-	let contenedor = document.getElementById("Productos-inicio", "lista");
+	let contenedor = document.getElementById("Productos-inicio");
 
 	let hijos = contenedor.childNodes;
 
@@ -201,8 +200,7 @@ function Search() {
 
 
 
-
-//MENU MOVILE
+//MENU MOBILE
 const nav = document.querySelector("#nav")
 const abrir = document.querySelector("#abrir")
 const cerrar = document.querySelector("#cerrar")

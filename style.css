@@ -32,7 +32,7 @@ body{
 footer{
     background-color: #d0d0d0;
     width: 100%;
-    margin-top: 125px;
+    margin-top: 300px;
     font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -41,9 +41,7 @@ footer{
     color: #c12e72;
 }
 
-.copyright{
-    background-color: #f180b5;
-}
+
 
 footer img{
     width: 25px;
@@ -66,8 +64,7 @@ footer img{
     border: none;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    width: 40px;
-    height: 30px;
+    width: 60px;
 }
 
 .SearchBar-button:active{
@@ -120,32 +117,8 @@ footer img{
     font-weight: bold;
 }
 
-
-.btnCarrito{
-    margin-top: 80%;
-    background-color: #f180b5;
-    border-radius: 100%;
-    border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    position: relative;
-    bottom: -25%;
-    right: 9%;
-
-}
-
-.btnCarrito:active{
-    background-color: #da5191;
-}
-
-.btnCarrito img{
-    width: 15px;
-    margin: auto;
-}
-
 fieldset input{
-    border-radius: 0;
+    border-radius: 5px;
     display: block;
     width: 95%;
     border-left: #f180b5;
@@ -239,11 +212,16 @@ fieldset{
     width: 95%;
     margin: auto;
     border-color: grey;
+    border-radius: 15px;
 }
 
 legend{
     color: #fafbfd;
-    font-family: sans-serif;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;   
+    font-size: large;
     letter-spacing: 2px;
     font-weight: bolder;
 }
@@ -269,24 +247,38 @@ legend{
     display: none;
 }
 
-.nav-list-marca {
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-list-marca li a {
-    text-decoration: none;
-    color: #1c1c1c;
-}
 
 .nav-list .marcas, .Search{
     display: none;
 }
 
+.navAdmin ul, a{
+    list-style-type: none;
+    color: #1c1c1c;
+}
+
+.contacto{
+    margin: 5px;
+}
+
+.contacto ul{
+    list-style-type: none;
+    margin: 10px;
+}
+
+.contacto li{
+    margin: 5px;
+}
+
+.copyright{
+    background-color: #f180b5;
+    color:#f6f6f6;
+}
 
 
-@media screen and (max-width: 845px) {
+
+
+@media screen and (max-width: 641px) {
 
 
     .SearchBar{
@@ -380,27 +372,24 @@ legend{
         background-color: #f180b5;
         border-radius: 50px;
         border: none;
-        width: 26%;
+        width: 23%;
         height: 45px;
         margin: 10px;
+        display: inline-flex;
         font-family: "Dosis", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;   
         font-size: large;
+        
     }
 
     .product{
-        width: 50%;
+        width: 40%;
         flex-wrap: wrap;
+
     }
 
-    .btnCarrito{
-        position: static;
-        border-radius: 50px;
-        height: 30px;
-        width: 30%;
-    }
 
     .product .precioPeso, .precioDolar{
         position: static;
